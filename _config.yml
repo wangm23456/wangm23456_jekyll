@@ -1,3 +1,5 @@
+gems: [jekyll-paginate,jekyll-gist]
+
 # Dependencies
 markdown:         kramdown
 highlighter:      Rouge
