@@ -1,9 +1,9 @@
 # Dependencies
-markdown:         redcarpet
-highlighter:      pygments
+markdown:         kramdown
+highlighter:      Rouge
 
 # Permalinks
-permalink:        pretty
+#permalink:        pretty
 #relative_permalinks: true
 
 # Setup
@@ -23,4 +23,4 @@ paginate:         5
 version:          2.1.0
 
 github:
-  repo:           https://github.com/poole/hyde
+  repo:           https://github.com/wangm23456/wangm23456.github.io
