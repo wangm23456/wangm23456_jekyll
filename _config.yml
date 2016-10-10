@@ -5,7 +5,7 @@ markdown:         kramdown
 highlighter:      Rouge
 
 # Permalinks
-#permalink:        pretty
+permalink:        pretty
 #relative_permalinks: true
 
 # Setup
