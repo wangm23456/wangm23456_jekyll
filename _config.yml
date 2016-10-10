@@ -11,7 +11,7 @@ highlighter:      Rouge
 # Setup
 title:            W-o-M
 tagline:          'A Jekyll blog'
-description:      'from to...'
+description:      '用另一个禁锢的世界来描绘某个禁锢的世界，用虚构的故事来陈述真实的事件，两者都是合理的。'
 url:              http://www.wangm23456.cc
 baseurl:          /
 

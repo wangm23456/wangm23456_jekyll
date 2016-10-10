@@ -4,7 +4,7 @@ title: About
 ---
 
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+<p>枪的扳机扣动了，我摸着光滑的枪柄。就在这时，响起一声震耳欲聋的干硬的枪声，使得一切都生动起来。我甩了甩汗水以及紧贴在我身上的阳光。我清楚自己打破了这一天的平衡，打破了海滩上不寻常的寂静，而在那里我曾经是幸福的。那时，我又对着那具一动不动的尸体开了四枪，子弹陷进他的身体里，不着痕迹。 --加缪《局外人》 </p>
 
 
 <p class="message">
