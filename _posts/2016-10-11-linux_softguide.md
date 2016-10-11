@@ -22,11 +22,11 @@ title: linux生存指南#1
 
 4.  OmniMarkupPreviewer问题：
 
-    >     Error: 404 Not Found
-    >     Sorry, the requested URL 'http://127.0.0.1:51004/view/31' caused an error:
-    >     'buffer_id(31) is not valid (closed or unsupported file format)'
-    >     **NOTE:** If you run multiple instances of Sublime Text, you may want to adjust
-    >     the `server_port` option in order to get this plugin work again.
+    >Error: 404 Not Found
+    >Sorry, the requested URL 'http://127.0.0.1:51004/view/31' caused an error:
+    >buffer_id(31) is not valid (closed or unsupported file format)'
+    >**NOTE:** If you run multiple instances of Sublime Text, you may want to adjust
+    >the `server_port` option in order to get this plugin work again.
 
      [方法](http://stackoverflow.com/questions/35798823/omnimarkuppreviewer-404)
      Sublime Text > Preferences > Package Settings > OmniMarkupPreviewer > Settings - User
@@ -83,9 +83,9 @@ title: linux生存指南#1
 # 4. Terminator
 1. 安装：[office](http://gnometerminator.blogspot.jp/p/introduction.html)
 
-    >     sudo add-apt-repository ppa:gnome-terminator
-    >     sudo apt-get update
-    >     sudo apt-get install terminator
+    >sudo add-apt-repository ppa:gnome-terminator
+    >sudo apt-get update
+    >sudo apt-get install terminator
 
 2. 配色方案：在 ~/.config/terminator/config 中添加配置代码：[iTerm2](https://github.com/mbadolato/iTerm2-Color-Schemes)
 
