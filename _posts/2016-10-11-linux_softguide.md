@@ -31,7 +31,9 @@ title: linux生存指南
 2.  解决中文下沉：首选项->设置：添加以下代码
 
     ~~~ json
-     "font_face": "SourceHanSansSC"
+     {
+        "font_face" : "SourceHanSansSC"
+    }
     ~~~
 
 4.  OmniMarkupPreviewer问题：
