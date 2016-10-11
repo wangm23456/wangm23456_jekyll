@@ -32,7 +32,7 @@ title: linux生存指南
 
     ~~~ json
      "font_face": "SourceHanSansSC"
-     ~~~
+    ~~~
 
 4.  OmniMarkupPreviewer问题：
 
@@ -59,7 +59,7 @@ title: linux生存指南
 1. Package control：[package control installation](https://packagecontrol.io/installation)
 2. 主题：material-theme:
 
-    ![](http://ww2.sinaimg.cn/mw690/66c92bc3gw1f8ngt4qtzaj218g0o9n6j.jpg)
+    ![material](http://ww2.sinaimg.cn/mw690/66c92bc3gw1f8ngt4qtzaj218g0o9n6j.jpg)
 
 3. MarkdownEditing
 4. MarkdownTOC
