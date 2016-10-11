@@ -29,6 +29,7 @@ title: linux生存指南
 
 1.  中文输入法修复：[sublime-text-imfix](https://github.com/lyfeyaj/sublime-text-imfix)
 2.  解决中文下沉：首选项->设置：添加以下代码
+
     ~~~ json
      "font_face": "SourceHanSansSC"
      ~~~
@@ -44,7 +45,7 @@ title: linux生存指南
      [方法](http://stackoverflow.com/questions/35798823/omnimarkuppreviewer-404)
      Sublime Text > Preferences > Package Settings > OmniMarkupPreviewer > Settings - User
 
-      加入以下代码：
+    加入以下代码：
 
     ~~~ json
       {
