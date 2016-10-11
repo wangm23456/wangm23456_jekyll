@@ -44,7 +44,8 @@ title: linux生存指南
      Sublime Text > Preferences > Package Settings > OmniMarkupPreviewer > Settings - User
 
       加入以下代码：
-~~~json
+
+~~~ json
       {
       "renderer_options-MarkdownRenderer": {
          "extensions": ["tables", "fenced_code", "codehilite"]
