@@ -185,19 +185,19 @@
 .highlight .o {
   color: #f92672;
 }
-div[class="highlight"] > pre > code[class*="language-"] {
+.highlight  pre  code{
   background:black;
   color:#f8f8f2;
 }
-div[class="highlight"] > pre {
+.highlight  pre {
   background:black;
 }
-figure[class="highlight"] > pre > code[class*="language-"] {
+figure[class="highlight"] > pre > code {
   text-align:left;
   background:black;
   color:#f8f8f2;
 }
-figure[class="highlight"] > pre > code[class*="language-"] td > pre{
+figure[class="highlight"] > pre > code td > pre{
   text-align:left;
   background:black;
   color:#f8f8f2;
@@ -213,4 +213,4 @@ div[class="highlighter-rouge"] > pre[class="highlight"] > code{
 div[class="highlighter-rouge"] > pre[class="highlight"] {
   background:black;
 }
-.lineno {color: #f8f8f2 } /*Number of line*/
+/* .lineno {color: #f8f8f2 } /*Number of line*/ */
