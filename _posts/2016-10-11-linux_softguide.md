@@ -44,13 +44,13 @@ title: linux生存指南
      Sublime Text > Preferences > Package Settings > OmniMarkupPreviewer > Settings - User
 
       加入以下代码：
-```
+~~~json
       {
       "renderer_options-MarkdownRenderer": {
          "extensions": ["tables", "fenced_code", "codehilite"]
            }
        }
-```
+~~~
 
 ## Package
 1. Package control：[package control installation](https://packagecontrol.io/installation)
