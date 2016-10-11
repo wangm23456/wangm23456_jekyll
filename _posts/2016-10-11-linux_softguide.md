@@ -20,6 +20,7 @@ title: linux生存指南
 - QtiPlot
 - learnote
 - Dwarf Fortress
+- 
 
 <!-- /MarkdownTOC -->
 
@@ -43,7 +44,7 @@ title: linux生存指南
      Sublime Text > Preferences > Package Settings > OmniMarkupPreviewer > Settings - User
 
       加入以下代码：
-```json
+```
       {
       "renderer_options-MarkdownRenderer": {
          "extensions": ["tables", "fenced_code", "codehilite"]
@@ -105,3 +106,5 @@ linux上的origin,[QtiPlot](http://www.qtiplot.com/)
 [wiki:lazy newb package](http://dwarffortresswiki.org/Utility:Lazy_Newb_Pack)
 
 [Unofficial Linux Lazy Newb Pack](http://www.bay12forums.com/smf/index.php?PHPSESSID=86ecf689a693ec3100c23e04c2f89d4f&topic=156011.msg6784657#msg6784657)
+
+# 
