@@ -25,6 +25,7 @@ title: linux生存指南
 <!-- /MarkdownTOC -->
 
 # sublime text 3
+
 ## Bug
 
 1.  中文输入法修复：[sublime-text-imfix](https://github.com/lyfeyaj/sublime-text-imfix)
