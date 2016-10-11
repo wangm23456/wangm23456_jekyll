@@ -3,7 +3,8 @@ gems: [jekyll-paginate,jekyll-gist]
 # Dependencies
 markdown:         kramdown
 highlighter:      Rouge
-
+kramdown:
+    input:          GFM
 # Permalinks
 permalink:        pretty
 #relative_permalinks: true

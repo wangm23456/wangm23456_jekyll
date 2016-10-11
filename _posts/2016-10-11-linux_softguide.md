@@ -25,15 +25,19 @@ title: linux生存指南
 
 # sublime text 3
 ## Bug
+
 1.  中文输入法修复：[sublime-text-imfix](https://github.com/lyfeyaj/sublime-text-imfix)
 2.  解决中文下沉：首选项->设置：添加以下代码
->     "font_face": "SourceHanSansSC"
+
+    >     "font_face": "SourceHanSansSC"
+
 4.  OmniMarkupPreviewer问题：
->     Error: 404 Not Found
->     Sorry, the requested URL 'http://127.0.0.1:51004/view/31' caused an error:
->     'buffer_id(31) is not valid (closed or unsupported file format)'
->     **NOTE:** If you run multiple instances of Sublime Text, you may want to adjust
->     the `server_port` option in order to get this plugin work again.
+
+    >     Error: 404 Not Found
+    >     Sorry, the requested URL 'http://127.0.0.1:51004/view/31' caused an error:
+    >     'buffer_id(31) is not valid (closed or unsupported file format)'
+    >     **NOTE:** If you run multiple instances of Sublime Text, you may want to adjust
+    >     the `server_port` option in order to get this plugin work again.
 
      [方法](http://stackoverflow.com/questions/35798823/omnimarkuppreviewer-404)
      Sublime Text > Preferences > Package Settings > OmniMarkupPreviewer > Settings - User
@@ -62,9 +66,11 @@ title: linux生存指南
 
 # Terminator
 1. 安装：[office](http://gnometerminator.blogspot.jp/p/introduction.html)
->     sudo add-apt-repository ppa:gnome-terminator
->     sudo apt-get update
->     sudo apt-get install terminator
+
+    >     sudo add-apt-repository ppa:gnome-terminator
+    >     sudo apt-get update
+    >     sudo apt-get install terminator
+
 2. 配色方案：[iTerm2](https://github.com/mbadolato/iTerm2-Color-Schemes)
 
 # 星际译王
@@ -80,13 +86,13 @@ title: linux生存指南
 
 # Dukto
 传输工具，搭配synergy食用，局域网互传文件利器。
+
 [介绍](http://www.iplaysoft.com/dukto.html)
 
 [官网](http://www.msec.it/blog/?page_id=556)
 
 # QtiPlot
-linux上的origin
-[QtiPlot](http://www.qtiplot.com/)
+linux上的origin,[QtiPlot](http://www.qtiplot.com/)
 
 # learnote
 [learnote](https://leanote.com/)
@@ -95,5 +101,7 @@ linux上的origin
 
 # Dwarf Fortress
 大名鼎鼎的矮人要塞，上手难度恐怖。
+
 [wiki:lazy newb package](http://dwarffortresswiki.org/Utility:Lazy_Newb_Pack)
+
 [Unofficial Linux Lazy Newb Pack](http://www.bay12forums.com/smf/index.php?PHPSESSID=86ecf689a693ec3100c23e04c2f89d4f&topic=156011.msg6784657#msg6784657)
