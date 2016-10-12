@@ -1,9 +1,4 @@
-gems: 
-    - jekyll-paginate
-    - jekyll-gist
-    - jekyll-sitemap
-    - jekyll-seo-tag
-    - jemoji
+gems:  [jekyll-paginate,jekyll-gist,jekyll-sitemap,jekyll-seo-tag,jemoji]
 
 # Dependencies
 markdown:       kramdown
