@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>
+         W-o-M &middot; A Jekyll blog 
+    </title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/public/css/poole.css">
+    <link rel="stylesheet" href="/public/css/base16.solarized.dark.css">
+    <link rel="stylesheet" href="/public/css/hyde.css">
+   <!--  <link rel="stylesheet" href="/public/css/prism.css">
+    <script src="//public/js/prism.js"></script>
+    <script>
+    hljs.initHighlightingOnLoad();
+    </script> -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/public/favicon.ico">
+    <!-- RSS -->
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+    <script type="text/javascript"
+ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+
+  <body class="theme-base-08 layout-reverse">
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          W-o-M
+        </a>
+      </h1>
+      <p class="lead">用另一个禁锢的世界来描绘某个禁锢的世界，用虚构的故事来陈述真实的事件，两者都是合理的。</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item active" href="/">Home</a>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about/">About</a>
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+
+      <!-- <a class="sidebar-nav-item" href="https://github.com/wangm23456/wangm23456.github.io/archive/v.zip">Download</a> -->
+      <a class="sidebar-nav-item" href="https://github.com/wangm23456/wangm23456.github.io">GitHub </a>
+      <!-- <span class="sidebar-nav-item">Currently v</span> -->
+    </nav>
+
+    <p>&copy; 2016. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2016/10/12/kramdown_guide/">
+        kramdown语法
+      </a>
+    </h1>
+
+    <span class="post-date">12 Oct 2016</span>
+
+    <p class="message">
+Github 更新 jekyll 3 后推荐使用 kramdown 和 Rouge 作为解析器和语法高亮器。
+kramdown 是 markdown 的扩充版，语法上与markdown有所不同。
+</p>
+
+<h1 id="section">代码围栏</h1>
+
+<p>kramdown 使用前后三个 ~作为围栏而不是三个`，
+通过在_config.yml 中设置：</p>
+
+<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">kramdown</span><span class="pi">:</span>
+        <span class="s">input</span><span class="pi">:</span> <span class="s">GFM</span>
+</code></pre>
+</div>
+
+<p>就可以支持 github 句法，用`作为代码围栏.</p>
+
+<p>在行内用单个`包含的内容也作为行内代码被解析。
+另外也可以使用 highlight 标签。</p>
+
+<p>如果出现代码被 Liquid 模板引擎过度解析，
+则需要在围栏外加: <code class="highlighter-rouge">raw</code>  标记。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>import numpy
+</code></pre>
+</div>
+
+<p>Tab 或四个空格也可以使内容以块显示，但没有自动检测语言，所以不会高亮。
+解析后的代码如下：</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"highlighter-rouge"</span><span class="nt">&gt;&lt;pre</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;code&gt;</span>import numpy
+<span class="nt">&lt;/code&gt;&lt;/pre&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<h1 id="section-1">换行</h1>
+
+<p>一行空行被作为换行标志。另外，EOB标记也可以用来换行，
+即：^单独一行，作为块元素结束标志。</p>
+
+<h1 id="section-2">链接</h1>
+
+<p>链接的url括号内用双引号可以添加鼠标悬停内容。</p>
+
+<p><code class="highlighter-rouge">[W-o-M](http://www.wangm23456.cc/ "wangm23456 blog")</code></p>
+
+<p><a href="http://www.wangm23456.cc/" title="wangm23456 blog">W-o-M</a></p>
+
+<h1 id="section-3">缩略语</h1>
+
+<p>即 Abbreviations (<abbr title="Abbreviations">abbr</abbr>) ，
+在文档中写：</p>
+
+<p><code class="highlighter-rouge">*[abbr]: Abbreviations </code>。</p>
+
+<p>默认是大写。</p>
+
+<h1 id="section-4">表格</h1>
+
+<p>可以使用html的table元素，或用markdown句法：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>|name|year|job
+:-:|:-|-:
+|year| 2016 |std
+</code></pre>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">name</th>
+      <th style="text-align: left">year</th>
+      <th style="text-align: right">job</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">year</td>
+      <td style="text-align: left">2016</td>
+      <td style="text-align: right">std</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>其中的冒号用于控制左右居中对齐。</p>
+
+<h1 id="section-5">文本</h1>
+
+<p><code class="highlighter-rouge">**加粗**</code>  <code class="highlighter-rouge">*斜体*</code>  <code class="highlighter-rouge">_斜体_</code>  <code class="highlighter-rouge">~~删除线~~</code></p>
+
+<p><strong>加粗</strong>  ，<em>斜体</em>，<em>斜体</em>，<del>删除线</del>`。</p>
+
+<h1 id="section-6">数学公式</h1>
+
+<p>支持latex公式，前后双美元包含即可，
+不换行即行内公式：<script type="math/tex">\hat\alpha_k=\hat\gamma_k</script>。
+单行则为单行公式，默认居中。</p>
+
+<script type="math/tex; mode=display">\hat\alpha_k=\frac{\sum_{j=1}^{N}\hat\gamma_{jk}} {N}</script>
+
+<p>当然，首先你要引入：</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span>
+ <span class="na">src=</span><span class="s">"http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre>
+</div>
+
+<p><a href="https://www.codecogs.com/latex/eqneditor.php?lang=zh-cn">Latex 公式在线编辑</a></p>
+
+<h1 id="section-7">脚注</h1>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>一个脚注[^1]。
+[^1]:footnote
+</code></pre>
+</div>
+
+<p>一个脚注<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>。</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>footnote <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/jekyll/2016/10/12/jekyll/">
+        jekyll
+      </a>
+    </h1>
+
+    <span class="post-date">12 Oct 2016</span>
+
+    <p class="message">
+    jekyll 是由Ruby 编写的静态博客框架。
+</p>
+
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2016/10/11/linux_softguide/">
+        linux生存指南#1
+      </a>
+    </h1>
+
+    <span class="post-date">11 Oct 2016</span>
+
+    <p class="message">
+    关于一些软件的配置和错误解决记录
+</p>
+
+<h1 id="sublime-text-3">1. sublime text 3</h1>
+
+<h2 id="bug">Bug</h2>
+
+<ol>
+  <li>中文输入法修复：<a href="https://github.com/lyfeyaj/sublime-text-imfix">sublime-text-imfix</a></li>
+  <li>
+    <p>解决中文下沉：首选项-&gt;设置：添加以下代码</p>
+
+    <div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"font_face"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"SourceHanSansSC"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+    </div>
+  </li>
+  <li>
+    <p>OmniMarkupPreviewer问题：</p>
+
+    <blockquote>
+      <p>Error: 404 Not Found
+Sorry, the requested URL ‘http://127.0.0.1:51004/view/31’ caused an error:
+buffer_id(31) is not valid (closed or unsupported file format)’
+<strong>NOTE:</strong> If you run multiple instances of Sublime Text, you may want to adjust
+the <code class="highlighter-rouge">server_port</code> option in order to get this plugin work again.</p>
+    </blockquote>
+
+    <p><a href="http://stackoverflow.com/questions/35798823/omnimarkuppreviewer-404">方法</a>
+ Sublime Text &gt; Preferences &gt; Package Settings &gt; OmniMarkupPreviewer &gt; Settings - User</p>
+
+    <p>加入以下代码：</p>
+
+    <div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="w">  </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"renderer_options-MarkdownRenderer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="nt">"extensions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"tables"</span><span class="p">,</span><span class="w"> </span><span class="s2">"fenced_code"</span><span class="p">,</span><span class="w"> </span><span class="s2">"codehilite"</span><span class="p">]</span><span class="w">
+       </span><span class="p">}</span><span class="w">
+   </span><span class="p">}</span><span class="w">
+</span></code></pre>
+    </div>
+  </li>
+</ol>
+
+<h2 id="package">Package</h2>
+<ol>
+  <li>Package control：<a href="https://packagecontrol.io/installation">package control installation</a></li>
+  <li>
+    <p>主题：material-theme:</p>
+
+    <p><img src="http://ww2.sinaimg.cn/mw690/66c92bc3gw1f8ngt4qtzaj218g0o9n6j.jpg" alt="material" /></p>
+  </li>
+  <li>MarkdownEditing</li>
+  <li>MarkdownTOC</li>
+  <li>omnimarkuppreviewer</li>
+  <li>TableEditor</li>
+  <li>Emmet:<a href="http://www.w3cplus.com/tools/emmet-cheat-sheet.html">前端开发必备！Emmet使用手册</a></li>
+  <li>etc.</li>
+</ol>
+
+<h1 id="zsh--oh-my-zsh">2. Zsh &amp; Oh My Zsh</h1>
+<p><a href="http://www.zsh.org/">Zsh</a> Zsh 是一款功能强大终端（shell）软件，既可以作为一个交互式终端，也可以作为一个脚本解释器。它在兼容 Bash 的同时 (默认不兼容，除非设置成 emulate sh) 还提供了很多改进，例如：</p>
+<ul>
+  <li>更高效</li>
+  <li>更好的自动补全</li>
+  <li>更好的文件名展开（通配符展开）</li>
+  <li>更好的数组处理</li>
+  <li>可定制性高</li>
+</ul>
+
+<p><a href="http://ohmyz.sh/">Oh My Zsh</a> 是Zsh的配置工具，包括很多主题、插件。</p>
+
+<h1 id="section">3. 桌面</h1>
+
+<h2 id="gnome-theme">字体&amp;Gnome theme</h2>
+
+<p><a href="http://input.fontbureau.com/">INPUT</a>，把ttf文件放在~/.fonts下即可。</p>
+
+<p><a href="https://www.gnome-look.org/p/1150507/">Pather-OSX</a>，放在/usr/share/themes下</p>
+
+<p><a href="https://www.gnome-look.org/p/1151321/">Oranchelo icons</a></p>
+
+<p><a href="https://www.gnome-look.org/p/1148692/">Capitaine Cursors</a></p>
+
+<h2 id="docky">Docky</h2>
+
+<p>一个启动器。</p>
+
+<h1 id="terminator">4. Terminator</h1>
+<ol>
+  <li>
+    <p>安装：<a href="http://gnometerminator.blogspot.jp/p/introduction.html">office</a></p>
+
+    <blockquote>
+      <p>sudo add-apt-repository ppa:gnome-terminator
+sudo apt-get update
+sudo apt-get install terminator</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>配色方案：在 ~/.config/terminator/config 中添加配置代码：<a href="https://github.com/mbadolato/iTerm2-Color-Schemes">iTerm2</a></p>
+  </li>
+</ol>
+
+<h1 id="guke-terminal">5. Guke Terminal</h1>
+<p><a href="http://guake-project.org/">Guake</a>是一个下拉式终端，默认<code class="highlighter-rouge">&lt;F12&gt;</code>呼出。</p>
+
+<h1 id="section-1">6. 星际译王</h1>
+<ol>
+  <li>安装: <a href="http://stardict-4.sourceforge.net/index_cn.php">StarDict</a></li>
+  <li>离线词典：<a href="http://abloz.com/huzheng/stardict-dic/zh_CN/">各种词典</a></li>
+</ol>
+
+<h1 id="section-2">7. 迅雷</h1>
+<p>作者已弃坑：<a href="https://github.com/Xinkai/XwareDesktop">Xware Desktop</a></p>
+
+<h1 id="section-3">8. 键鼠共享</h1>
+<ol>
+  <li><a href="https://github.com/symless/synergy">代码</a></li>
+  <li><a href="https://symless.com/nightly">nightly版</a></li>
+</ol>
+
+<h1 id="dukto">9. Dukto</h1>
+<p>传输工具，搭配synergy食用，局域网互传文件利器。</p>
+
+<p><a href="http://www.iplaysoft.com/dukto.html">介绍</a></p>
+
+<p><a href="http://www.msec.it/blog/?page_id=556">官网</a></p>
+
+<h1 id="gdebi">10. GDebi</h1>
+<p>软件编译安装工具。</p>
+
+<h1 id="qtiplot">11. QtiPlot</h1>
+<p>linux上的origin,<a href="http://www.qtiplot.com/">QtiPlot</a></p>
+
+<h1 id="learnote">12. learnote</h1>
+<p><a href="https://leanote.com/">learnote</a></p>
+
+<p>一款跨平台的笔记应用，支持markdown。</p>
+
+<h1 id="game">13. Game</h1>
+
+<h2 id="dwarf-fortress">Dwarf Fortress</h2>
+<p>大名鼎鼎的<strong>矮人要塞</strong>，上手难度恐怖。</p>
+
+<p><a href="http://dwarffortresswiki.org/Utility:Lazy_Newb_Pack">wiki:lazy newb package</a></p>
+
+<p><a href="http://www.bay12forums.com/smf/index.php?PHPSESSID=86ecf689a693ec3100c23e04c2f89d4f&amp;topic=156011.msg6784657#msg6784657">Unofficial Linux Lazy Newb Pack</a></p>
+
+<h2 id="tales-of-majeyal-age-of-ascendancy">Tales Of Maj’Eyal: Age Of Ascendancy</h2>
+<p><a href="https://te4.org/">马基埃亚尔的传说</a>，Rogulike-RPG，最优秀的Roguelike游戏之一。</p>
+
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2013/12/28/introducing-hyde/">
+        Introducing Hyde
+      </a>
+    </h1>
+
+    <span class="post-date">28 Dec 2013</span>
+
+    <p>Hyde is a brazen two-column <a href="http://jekyllrb.com">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. It’s based on <a href="http://getpoole.com">Poole</a>, the Jekyll butler.</p>
+
+<h3 id="built-on-poole">Built on Poole</h3>
+
+<p>Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by <a href="https://twitter.com/mdo">@mdo</a>. Poole, and every theme built on it (like Hyde here) includes the following:</p>
+
+<ul>
+  <li>Complete Jekyll setup included (layouts, config, <a href="/404">404</a>, <a href="/atom.xml">RSS feed</a>, posts, and <a href="/about">example page</a>)</li>
+  <li>Mobile friendly design and development</li>
+  <li>Easily scalable text and component sizing with <code class="highlighter-rouge">rem</code> units in the CSS</li>
+  <li>Support for a wide gamut of HTML elements</li>
+  <li>Related posts (time-based, because Jekyll) below each post</li>
+  <li>Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter)</li>
+</ul>
+
+<h3 id="hyde-features">Hyde features</h3>
+
+<p>In addition to the features of Poole, Hyde adds the following:</p>
+
+<ul>
+  <li>Sidebar includes support for textual modules and a dynamically generated navigation with active link support</li>
+  <li>Two orientations for content and sidebar, default (left sidebar) and <a href="https://github.com/poole/lanyon#reverse-layout">reverse</a> (right sidebar), available via <code class="highlighter-rouge">&lt;body&gt;</code> classes</li>
+  <li><a href="https://github.com/poole/hyde#themes">Eight optional color schemes</a>, available via <code class="highlighter-rouge">&lt;body&gt;</code> classes</li>
+</ul>
+
+<p><a href="https://github.com/poole/hyde#readme">Head to the readme</a> to learn more.</p>
+
+<h3 id="browser-support">Browser support</h3>
+
+<p>Hyde is by preference a forward-thinking project. In addition to the latest versions of Chrome, Safari (mobile and desktop), and Firefox, it is only compatible with Internet Explorer 9 and above.</p>
+
+<h3 id="download">Download</h3>
+
+<p>Hyde is developed on and hosted with GitHub. Head to the <a href="https://github.com/poole/hyde">GitHub repository</a> for downloads, bug reports, and features requests.</p>
+
+<p>Thanks!</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2012/02/07/example-content/">
+        Example content
+      </a>
+    </h1>
+
+    <span class="post-date">07 Feb 2012</span>
+
+    <div class="message">
+  Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
+</div>
+
+<p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. <em>Aenean eu leo quam.</em> Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+
+<blockquote>
+  <p>Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+</blockquote>
+
+<p>Etiam porta <strong>sem malesuada magna</strong> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+
+<h2 id="inline-html-elements">Inline HTML elements</h2>
+
+<p>HTML defines a long list of available inline tags, a complete list of which can be found on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>.</p>
+
+<ul>
+  <li><strong>To bold text</strong>, use <code class="highlighter-rouge">&lt;strong&gt;</code>.</li>
+  <li><em>To italicize text</em>, use <code class="highlighter-rouge">&lt;em&gt;</code>.</li>
+  <li>Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use <code class="highlighter-rouge">&lt;abbr&gt;</code>, with an optional <code class="highlighter-rouge">title</code> attribute for the full phrase.</li>
+  <li>Citations, like <cite>— Mark otto</cite>, should use <code class="highlighter-rouge">&lt;cite&gt;</code>.</li>
+  <li><del>Deleted</del> text should use <code class="highlighter-rouge">&lt;del&gt;</code> and <ins>inserted</ins> text should use <code class="highlighter-rouge">&lt;ins&gt;</code>.</li>
+  <li>Superscript <sup>text</sup> uses <code class="highlighter-rouge">&lt;sup&gt;</code> and subscript <sub>text</sub> uses <code class="highlighter-rouge">&lt;sub&gt;</code>.</li>
+</ul>
+
+<p>Most of these elements are styled by browsers with few modifications on our part.</p>
+
+<h2 id="heading">Heading</h2>
+
+<p>Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+
+<h3 id="code">Code</h3>
+
+<p>Cum sociis natoque penatibus et magnis dis <code class="highlighter-rouge">code element</code> montes, nascetur ridiculus mus.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Example can be run directly in your JavaScript console
+</span>
+
+<span class="c1">// Create a function that takes two arguments and returns the sum of those arguments
+</span>
+<span class="kd">var</span> <span class="nx">adder</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Function</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="s2">"return a + b"</span><span class="p">);</span>
+
+<span class="c1">// Call the function
+</span>
+<span class="nx">adder</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
+<span class="c1">// &gt; 8</span></code></pre></figure>
+
+<p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+
+<h3 id="gists-via-github-pages">Gists via GitHub Pages</h3>
+
+<p>Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui.</p>
+
+<p>true<script src="https://gist.github.com/5555251.js?file=gist.md"> </script></p>
+
+<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper.</p>
+
+<h3 id="lists">Lists</h3>
+
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+
+<ul>
+  <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+  <li>Donec id elit non mi porta gravida at eget metus.</li>
+  <li>Nulla vitae elit libero, a pharetra augue.</li>
+</ul>
+
+<p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+
+<ol>
+  <li>Vestibulum id ligula porta felis euismod semper.</li>
+  <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+  <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
+</ol>
+
+<p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
+
+<dl>
+  <dt>HyperText Markup Language (HTML)</dt>
+  <dd>The language used to describe and define the content of a Web page</dd>
+
+  <dt>Cascading Style Sheets (CSS)</dt>
+  <dd>Used to describe the appearance of Web content</dd>
+
+  <dt>JavaScript (JS)</dt>
+  <dd>The programming language used to build advanced Web sites and applications</dd>
+</dl>
+
+<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+
+<h3 id="images">Images</h3>
+
+<p>Quisque consequat sapien eget quam rhoncus, sit amet laoreet diam tempus. Aliquam aliquam metus erat, a pulvinar turpis suscipit at.</p>
+
+<p><img src="http://placehold.it/800x400" alt="placeholder" title="Large example image" />
+<img src="http://placehold.it/400x200" alt="placeholder" title="Medium example image" />
+<img src="http://placehold.it/200x200" alt="placeholder" title="Small example image" /></p>
+
+<h3 id="tables">Tables</h3>
+
+<p>Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Upvotes</th>
+      <th>Downvotes</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Totals</td>
+      <td>21</td>
+      <td>23</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>Alice</td>
+      <td>10</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>Charlie</td>
+      <td>7</td>
+      <td>9</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+
+<hr />
+
+<p>Want to see something else added? <a href="https://github.com/poole/poole/issues/new">Open an issue.</a></p>
+
+  </div>
+  
+</div>
+
+<div class="pagination">
+  
+    <a class="pagination-item older" href="/page2">Older</a>
+  
+  
+    <span class="pagination-item newer">Newer</span>
+  
+</div>
+    </div>
+
+  </body>
+</html>
