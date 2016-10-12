@@ -1,6 +1,7 @@
 ---
 layout: post
 title: linux生存指南#1
+category: linux
 ---
 
 <p class="message">

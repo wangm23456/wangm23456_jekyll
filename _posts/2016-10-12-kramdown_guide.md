@@ -1,6 +1,7 @@
 ---
 layout: post
 title: kramdown语法
+category: markdown
 ---
 
 <p class="message">
