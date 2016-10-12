@@ -28,13 +28,14 @@ kramdown:
 
     import numpy
 
- Tab 或四个空格也可以使内容以块显示，但不能自动检测语言，所以不会高亮。
+ Tab 或四个空格也可以使内容以块显示，但没有自动检测语言，所以不会高亮。
+解析后的代码如下：
 
-```html
+~~~html
 <div class="highlighter-rouge"><pre class="highlight"><code>import numpy
 </code></pre>
 </div>
-```
+~~~
 
 # 换行
 
@@ -49,15 +50,14 @@ kramdown:
 
 [W-o-M](http://www.wangm23456.cc/ "wangm23456 blog")
 
-要链接到其他文章可以使用：
-
-`[第一篇文章](% post_url 2016-10-11-linux_softguide  %)`
-
-[第一篇文章](% post_url 2016-10-11-linux_softguide  %)
-
 # 缩略语
 
-即 Abbreviations (abbr) ，在文档中写：`*[abbr]: Abbreviations `。默认是大写。
+即 Abbreviations (abbr) ，
+在文档中写：
+
+`*[abbr]: Abbreviations `。
+
+默认是大写。
 
 *[abbr]: Abbreviations
 
@@ -82,3 +82,32 @@ kramdown:
 `**加粗**`  `*斜体*`  `_斜体_`  `~~删除线~~`
 
 **加粗**  ，*斜体*，_斜体_，~~删除线~~`。
+
+# 数学公式
+
+支持latex公式，前后双美元包含即可，
+不换行即行内公式：$$\hat\alpha_k=\hat\gamma_k$$。
+单行则为单行公式，默认居中。
+
+$$\hat\alpha_k=\frac{\sum_{j=1}^{N}\hat\gamma_{jk}} {N}$$
+
+当然，首先你要引入：
+
+```html
+<script type="text/javascript"
+ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+```
+
+[Latex 公式在线编辑](https://www.codecogs.com/latex/eqneditor.php?lang=zh-cn)
+
+# 脚注
+
+```
+一个脚注[^1]。
+[^1]:footnote
+```
+
+一个脚注[^1]。
+
+[^1]:footnote
