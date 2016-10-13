@@ -343,7 +343,11 @@ tbody tr:nth-child(odd) th {
 .post-title {
   margin-top: 0;
 }
-
+ .post-list,
+ .page-list{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+ }
 /* Meta data line below post title */
 .post-date {
   display: block;

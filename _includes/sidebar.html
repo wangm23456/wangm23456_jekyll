@@ -1,4 +1,10 @@
 <div class="sidebar">
+<!-- 分类列表 -->
+    <!-- <h3 class="aside-title">分类</h3> -->
+      <div class="sidebar-content">
+      {% categories_list %}
+      </div>
+
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <h1>
@@ -10,7 +16,7 @@
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
+      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">主页</a>
 
       {% comment %}
         The code below dynamically generates a sidebar nav of pages with
@@ -32,6 +38,6 @@
     </nav>
 
 
-    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.  {{ jekyll_version }}</p>
+    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved. </p>
   </div>
 </div>
