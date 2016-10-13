@@ -1,6 +1,25 @@
 # Ignore docs files
 _gh_pages
-_site
+#_site
+404.html
+_config.yml   
+index.html  
+public
+about.md      
+_drafts       
+_layouts    
+Rakefile
+archive.html  
+Gemfile       
+LICENSE.md  
+README.md
+atom.xml      
+Gemfile.lock  
+_plugins    
+CNAME        
+ _includes     
+ _posts
+
 .ruby-version
 
 # Numerous always-ignore extensions
