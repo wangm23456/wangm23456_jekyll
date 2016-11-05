@@ -4,7 +4,7 @@
  <title>W-o-M</title>
  <link href="http://www.wangm23456.cc/atom.xml" rel="self"/>
  <link href="http://www.wangm23456.cc/"/>
- <updated>2016-10-13T16:23:46+08:00</updated>
+ <updated>2016-10-14T20:18:59+08:00</updated>
  <id>http://www.wangm23456.cc</id>
  <author>
    <name>wangm23456</name>
@@ -13,16 +13,28 @@
 
  
  <entry>
+   <title>(ubuntu 16.04) xop 2.3 所需依赖 libXp 的安装</title>
+   <link href="http://www.wangm23456.cc/linux/2016/10/14/ubuntu16_libxp"/>
+   <updated>2016-10-14T00:00:00+08:00</updated>
+   <id>http://www.wangm23456.cc/linux/2016/10/14/ubuntu16_libxp</id>
+   <content type="html">&lt;p&gt;引用自&lt;a href=&quot;https://afni.nimh.nih.gov/afni/community/board/read.php?1,151673,151693&quot;&gt;来源&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;安装可能需要的依赖：apt-get install dh-autoreconf quilt x11proto-print-dev libpng16*&lt;/li&gt;
+  &lt;li&gt;下载&lt;a href=&quot;http://packages.ubuntu.com/source/trusty/libxp&quot;&gt;源码包&lt;/a&gt;，获得三个文件：libxp_1.0.2-1.dsc，libxp_1.0.2.orig.tar.gz，libxp_1.0.2-1ubuntu1.diff.gz，版本号适当更改。将这三个文件放进新建文件夹：libXp。&lt;/li&gt;
+  &lt;li&gt;cd至libXp，键入：dpkg-source -x libxp_1.0.2-1.dsc&lt;/li&gt;
+  &lt;li&gt;进入生成的子文件夹：libXp-1.0.2，键入：dpkg-buildpackage -uc -us -rfakeroot -b&lt;/li&gt;
+  &lt;li&gt;安装编译好的文件：dpkg -i libxp-dev_1.0.2-1ubuntu1_amd64.deb libxp6_1.0.2-1ubuntu1_amd64.deb&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>kramdown语法</title>
    <link href="http://www.wangm23456.cc/markdown/2016/10/12/kramdown_guide"/>
    <updated>2016-10-12T00:00:00+08:00</updated>
    <id>http://www.wangm23456.cc/markdown/2016/10/12/kramdown_guide</id>
-   <content type="html">&lt;p class=&quot;message&quot;&gt;
-Github 更新 jekyll 3 后推荐使用 kramdown 和 Rouge 作为解析器和语法高亮器。
-kramdown 是 markdown 的扩充版，语法上与markdown有所不同。
-&lt;/p&gt;
-
-&lt;h1 id=&quot;section&quot;&gt;代码围栏&lt;/h1&gt;
+   <content type="html">&lt;h1 id=&quot;section&quot;&gt;代码围栏&lt;/h1&gt;
 
 &lt;p&gt;kramdown 使用前后三个 ~作为围栏而不是三个`，
 通过在_config.yml 中设置：&lt;/p&gt;
@@ -152,9 +164,8 @@ kramdown 是 markdown 的扩充版，语法上与markdown有所不同。
    <link href="http://www.wangm23456.cc/jekyll/2016/10/12/jekyll"/>
    <updated>2016-10-12T00:00:00+08:00</updated>
    <id>http://www.wangm23456.cc/jekyll/2016/10/12/jekyll</id>
-   <content type="html">&lt;p class=&quot;message&quot;&gt;
-    jekyll 是由Ruby 编写的静态博客框架。
-&lt;/p&gt;
+   <content type="html">&lt;p&gt;github-pages 支持 jekyll 的意思是说 github-pages 可以把你的 jekyll 构建（build），
+这和你在本地执行 jekyll build 的结果是一样的。&lt;/p&gt;
 
 </content>
  </entry>
@@ -164,11 +175,7 @@ kramdown 是 markdown 的扩充版，语法上与markdown有所不同。
    <link href="http://www.wangm23456.cc/linux/2016/10/11/linux_softguide"/>
    <updated>2016-10-11T00:00:00+08:00</updated>
    <id>http://www.wangm23456.cc/linux/2016/10/11/linux_softguide</id>
-   <content type="html">&lt;p class=&quot;message&quot;&gt;
-    关于一些软件的配置和错误解决记录
-&lt;/p&gt;
-
-&lt;h1 id=&quot;sublime-text-3&quot;&gt;1. sublime text 3&lt;/h1&gt;
+   <content type="html">&lt;h1 id=&quot;sublime-text-3&quot;&gt;1. sublime text 3&lt;/h1&gt;
 
 &lt;h2 id=&quot;bug&quot;&gt;Bug&lt;/h2&gt;
 

@@ -16,7 +16,7 @@ module Jekyll
 		def category_link(category, context)
 			site = context.registers[:site]
 			archive = Archives::Archive.new(site, category, 'category', [])
-			url = site.config['baseurl'] + archive.url
+			url = site.baseurl + archive.url
 			%(<a href="#{url}" title="#{category}">#{category}</a>)
 		end
 	end

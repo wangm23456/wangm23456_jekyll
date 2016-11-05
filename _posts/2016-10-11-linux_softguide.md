@@ -2,11 +2,8 @@
 layout: post
 title: linux生存指南#1
 categories: linux
+excerpt: 关于一些软件的配置和错误解决记录。
 ---
-
-<p class="message">
-    关于一些软件的配置和错误解决记录
-</p>
 
 # 1. sublime text 3
 
