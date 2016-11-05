@@ -121,9 +121,9 @@
 
     Github 更新 jekyll 3 后推荐使用 kramdown 和 Rouge 作为解析器和语法高亮器。 kramdown 是 markdown 的扩充版，语法上与markdown有所不同。
     <!-- <h1 id="section">代码围栏</h1>
+<p>========</p>
 
-<p>kramdown 使用前后三个 ~作为围栏而不是三个`，
-通过在_config.yml 中设置：</p>
+<p>kramdown 使用前后三个 ~作为围栏而不是三个`， 通过在_config.yml 中设置：</p>
 
 <div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">kramdown</span><span class="pi">:</span>
         <span class="s">input</span><span class="pi">:</span> <span class="s">GFM</span>
@@ -132,18 +132,15 @@
 
 <p>就可以支持 github 句法，用`作为代码围栏.</p>
 
-<p>在行内用单个`包含的内容也作为行内代码被解析。
-另外也可以使用 highlight 标签。</p>
+<p>在行内用单个`包含的内容也作为行内代码被解析。 另外也可以使用 highlight 标签。</p>
 
-<p>如果出现代码被 Liquid 模板引擎过度解析，
-则需要在围栏外加: <code class="highlighter-rouge">raw</code>  标记。</p>
+<p>如果出现代码被 Liquid 模板引擎过度解析， 则需要在围栏外加: <code class="highlighter-rouge">raw</code> 标记。</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>import numpy
 </code></pre>
 </div>
 
-<p>Tab 或四个空格也可以使内容以块显示，但没有自动检测语言，所以不会高亮。
-解析后的代码如下：</p>
+<p>Tab 或四个空格也可以使内容以块显示，但没有自动检测语言，所以不会高亮。 解析后的代码如下：</p>
 
 <div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"highlighter-rouge"</span><span class="nt">&gt;&lt;pre</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;code&gt;</span>import numpy
 <span class="nt">&lt;/code&gt;&lt;/pre&gt;</span>
@@ -152,28 +149,30 @@
 </div>
 
 <h1 id="section-1">换行</h1>
+<p>====</p>
 
-<p>一行空行被作为换行标志。另外，EOB标记也可以用来换行，
-即：^单独一行，作为块元素结束标志。</p>
+<p>一行空行被作为换行标志。另外，EOB标记也可以用来换行， 即：^单独一行，作为块元素结束标志。</p>
 
 <h1 id="section-2">链接</h1>
+<p>====</p>
 
 <p>链接的url括号内用双引号可以添加鼠标悬停内容。</p>
 
 <p><code class="highlighter-rouge">[W-o-M](http://www.wangm23456.cc/ "wangm23456 blog")</code></p>
 
-<p><a href="http://www.wangm23456.cc/" title="wangm23456 blog">W-o-M</a></p>
+<p><a href="http://www.wangm23456.cc/">W-o-M</a></p>
 
 <h1 id="section-3">缩略语</h1>
+<p>======</p>
 
-<p>即 Abbreviations (<abbr title="Abbreviations">abbr</abbr>) ，
-在文档中写：</p>
+<p>即 Abbreviations (abbr) ， 在文档中写：</p>
 
-<p><code class="highlighter-rouge">*[abbr]: Abbreviations </code>。</p>
+<p><code class="highlighter-rouge">*[abbr]: Abbreviations</code>。</p>
 
 <p>默认是大写。</p>
 
 <h1 id="section-4">表格</h1>
+<p>====</p>
 
 <p>可以使用html的table元素，或用markdown句法：</p>
 
@@ -184,18 +183,16 @@
 </div>
 
 <table>
-  <thead>
-    <tr>
-      <th style="text-align: center">name</th>
-      <th style="text-align: left">year</th>
-      <th style="text-align: right">job</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">year</td>
-      <td style="text-align: left">2016</td>
-      <td style="text-align: right">std</td>
+      <td>name</td>
+      <td>year</td>
+      <td>job:-:</td>
+      <td>:-</td>
+      <td>-:</td>
+      <td>year</td>
+      <td>2016</td>
+      <td>std</td>
     </tr>
   </tbody>
 </table>
@@ -203,18 +200,18 @@
 <p>其中的冒号用于控制左右居中对齐。</p>
 
 <h1 id="section-5">文本</h1>
+<p>====</p>
 
-<p><code class="highlighter-rouge">**加粗**</code>  <code class="highlighter-rouge">*斜体*</code>  <code class="highlighter-rouge">_斜体_</code>  <code class="highlighter-rouge">~~删除线~~</code></p>
+<p><code class="highlighter-rouge">**加粗**</code> <code class="highlighter-rouge">*斜体*</code> <code class="highlighter-rouge">_斜体_</code> <code class="highlighter-rouge">~~删除线~~</code></p>
 
-<p><strong>加粗</strong>  ，<em>斜体</em>，<em>斜体</em>，<del>删除线</del>`。</p>
+<p><strong>加粗</strong> ，<em>斜体</em>，<em>斜体</em>，<del>删除线</del>`。</p>
 
 <h1 id="section-6">数学公式</h1>
+<p>========</p>
 
-<p>支持latex公式，前后双美元包含即可，
-不换行即行内公式：<script type="math/tex">\hat\alpha_k=\hat\gamma_k</script>。
-单行则为单行公式，默认居中。</p>
+<p>支持latex公式，前后双美元包含即可， 不换行即行内公式：<script type="math/tex">\hat\alpha_k=\hat\gamma_k</script>。 单行则为单行公式，默认居中。</p>
 
-<script type="math/tex; mode=display">\hat\alpha_k=\frac{\sum_{j=1}^{N}\hat\gamma_{jk}} {N}</script>
+<script type="math/tex; mode=display">\hat\alpha*k=\frac{\sum*{j=1}^{N}\hat\gamma_{jk}} {N}</script>
 
 <p>当然，首先你要引入：</p>
 
@@ -227,21 +224,16 @@
 <p><a href="https://www.codecogs.com/latex/eqneditor.php?lang=zh-cn">Latex 公式在线编辑</a></p>
 
 <h1 id="section-7">脚注</h1>
+<p>====</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>一个脚注[^1]。
-[^1]:footnote
+
 </code></pre>
 </div>
 
-<p>一个脚注<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>。</p>
+<p>一个脚注[^1](footnote)。</p>
 
-<div class="footnotes">
-  <ol>
-    <li id="fn:1">
-      <p>footnote <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
+<p>*[abbr]: Abbreviations</p>
  -->
   </div>
   

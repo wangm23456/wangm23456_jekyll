@@ -4,7 +4,7 @@
  <title>W-o-M</title>
  <link href="http://www.wangm23456.cc/atom.xml" rel="self"/>
  <link href="http://www.wangm23456.cc/"/>
- <updated>2016-10-14T20:18:59+08:00</updated>
+ <updated>2016-11-05T13:02:03+08:00</updated>
  <id>http://www.wangm23456.cc</id>
  <author>
    <name>wangm23456</name>
@@ -35,9 +35,9 @@
    <updated>2016-10-12T00:00:00+08:00</updated>
    <id>http://www.wangm23456.cc/markdown/2016/10/12/kramdown_guide</id>
    <content type="html">&lt;h1 id=&quot;section&quot;&gt;代码围栏&lt;/h1&gt;
+&lt;p&gt;========&lt;/p&gt;
 
-&lt;p&gt;kramdown 使用前后三个 ~作为围栏而不是三个`，
-通过在_config.yml 中设置：&lt;/p&gt;
+&lt;p&gt;kramdown 使用前后三个 ~作为围栏而不是三个`， 通过在_config.yml 中设置：&lt;/p&gt;
 
 &lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;kramdown&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
         &lt;span class=&quot;s&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;GFM&lt;/span&gt;
@@ -46,18 +46,15 @@
 
 &lt;p&gt;就可以支持 github 句法，用`作为代码围栏.&lt;/p&gt;
 
-&lt;p&gt;在行内用单个`包含的内容也作为行内代码被解析。
-另外也可以使用 highlight 标签。&lt;/p&gt;
+&lt;p&gt;在行内用单个`包含的内容也作为行内代码被解析。 另外也可以使用 highlight 标签。&lt;/p&gt;
 
-&lt;p&gt;如果出现代码被 Liquid 模板引擎过度解析，
-则需要在围栏外加: &lt;code class=&quot;highlighter-rouge&quot;&gt;raw&lt;/code&gt;  标记。&lt;/p&gt;
+&lt;p&gt;如果出现代码被 Liquid 模板引擎过度解析， 则需要在围栏外加: &lt;code class=&quot;highlighter-rouge&quot;&gt;raw&lt;/code&gt; 标记。&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import numpy
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Tab 或四个空格也可以使内容以块显示，但没有自动检测语言，所以不会高亮。
-解析后的代码如下：&lt;/p&gt;
+&lt;p&gt;Tab 或四个空格也可以使内容以块显示，但没有自动检测语言，所以不会高亮。 解析后的代码如下：&lt;/p&gt;
 
 &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;highlighter-rouge&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;pre&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;highlight&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;code&amp;gt;&lt;/span&gt;import numpy
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&lt;/span&gt;
@@ -66,28 +63,30 @@
 &lt;/div&gt;
 
 &lt;h1 id=&quot;section-1&quot;&gt;换行&lt;/h1&gt;
+&lt;p&gt;====&lt;/p&gt;
 
-&lt;p&gt;一行空行被作为换行标志。另外，EOB标记也可以用来换行，
-即：^单独一行，作为块元素结束标志。&lt;/p&gt;
+&lt;p&gt;一行空行被作为换行标志。另外，EOB标记也可以用来换行， 即：^单独一行，作为块元素结束标志。&lt;/p&gt;
 
 &lt;h1 id=&quot;section-2&quot;&gt;链接&lt;/h1&gt;
+&lt;p&gt;====&lt;/p&gt;
 
 &lt;p&gt;链接的url括号内用双引号可以添加鼠标悬停内容。&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;[W-o-M](http://www.wangm23456.cc/ &quot;wangm23456 blog&quot;)&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.wangm23456.cc/&quot; title=&quot;wangm23456 blog&quot;&gt;W-o-M&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.wangm23456.cc/&quot;&gt;W-o-M&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;section-3&quot;&gt;缩略语&lt;/h1&gt;
+&lt;p&gt;======&lt;/p&gt;
 
-&lt;p&gt;即 Abbreviations (&lt;abbr title=&quot;Abbreviations&quot;&gt;abbr&lt;/abbr&gt;) ，
-在文档中写：&lt;/p&gt;
+&lt;p&gt;即 Abbreviations (abbr) ， 在文档中写：&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;*[abbr]: Abbreviations &lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;*[abbr]: Abbreviations&lt;/code&gt;。&lt;/p&gt;
 
 &lt;p&gt;默认是大写。&lt;/p&gt;
 
 &lt;h1 id=&quot;section-4&quot;&gt;表格&lt;/h1&gt;
+&lt;p&gt;====&lt;/p&gt;
 
 &lt;p&gt;可以使用html的table元素，或用markdown句法：&lt;/p&gt;
 
@@ -98,18 +97,16 @@
 &lt;/div&gt;
 
 &lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;name&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;year&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;job&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;year&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;2016&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;std&lt;/td&gt;
+      &lt;td&gt;name&lt;/td&gt;
+      &lt;td&gt;year&lt;/td&gt;
+      &lt;td&gt;job:-:&lt;/td&gt;
+      &lt;td&gt;:-&lt;/td&gt;
+      &lt;td&gt;-:&lt;/td&gt;
+      &lt;td&gt;year&lt;/td&gt;
+      &lt;td&gt;2016&lt;/td&gt;
+      &lt;td&gt;std&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -117,18 +114,18 @@
 &lt;p&gt;其中的冒号用于控制左右居中对齐。&lt;/p&gt;
 
 &lt;h1 id=&quot;section-5&quot;&gt;文本&lt;/h1&gt;
+&lt;p&gt;====&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;**加粗**&lt;/code&gt;  &lt;code class=&quot;highlighter-rouge&quot;&gt;*斜体*&lt;/code&gt;  &lt;code class=&quot;highlighter-rouge&quot;&gt;_斜体_&lt;/code&gt;  &lt;code class=&quot;highlighter-rouge&quot;&gt;~~删除线~~&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;**加粗**&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;*斜体*&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;_斜体_&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;~~删除线~~&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;加粗&lt;/strong&gt;  ，&lt;em&gt;斜体&lt;/em&gt;，&lt;em&gt;斜体&lt;/em&gt;，&lt;del&gt;删除线&lt;/del&gt;`。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;加粗&lt;/strong&gt; ，&lt;em&gt;斜体&lt;/em&gt;，&lt;em&gt;斜体&lt;/em&gt;，&lt;del&gt;删除线&lt;/del&gt;`。&lt;/p&gt;
 
 &lt;h1 id=&quot;section-6&quot;&gt;数学公式&lt;/h1&gt;
+&lt;p&gt;========&lt;/p&gt;
 
-&lt;p&gt;支持latex公式，前后双美元包含即可，
-不换行即行内公式：&lt;script type=&quot;math/tex&quot;&gt;\hat\alpha_k=\hat\gamma_k&lt;/script&gt;。
-单行则为单行公式，默认居中。&lt;/p&gt;
+&lt;p&gt;支持latex公式，前后双美元包含即可， 不换行即行内公式：&lt;script type=&quot;math/tex&quot;&gt;\hat\alpha_k=\hat\gamma_k&lt;/script&gt;。 单行则为单行公式，默认居中。&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\hat\alpha_k=\frac{\sum_{j=1}^{N}\hat\gamma_{jk}} {N}&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\hat\alpha*k=\frac{\sum*{j=1}^{N}\hat\gamma_{jk}} {N}&lt;/script&gt;
 
 &lt;p&gt;当然，首先你要引入：&lt;/p&gt;
 
@@ -141,21 +138,16 @@
 &lt;p&gt;&lt;a href=&quot;https://www.codecogs.com/latex/eqneditor.php?lang=zh-cn&quot;&gt;Latex 公式在线编辑&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;section-7&quot;&gt;脚注&lt;/h1&gt;
+&lt;p&gt;====&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;一个脚注[^1]。
-[^1]:footnote
+
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;一个脚注&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+&lt;p&gt;一个脚注[^1](footnote)。&lt;/p&gt;
 
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;footnote &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
+&lt;p&gt;*[abbr]: Abbreviations&lt;/p&gt;
 </content>
  </entry>
  
